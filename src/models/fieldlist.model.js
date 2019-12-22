@@ -14,6 +14,7 @@ module.exports = function (app) {
     sequenceNumber: { type: String, required: false },
     alignment: { type: String, required: false },
     paddingLeft: { type: String, required: false },
+    paddingLeftLength: { type: String, required: false },
     paddingRight: { type: String, required: false },
   }, {
     timestamps: true
