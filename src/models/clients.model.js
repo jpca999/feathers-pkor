@@ -8,6 +8,7 @@ module.exports = function (app) {
   const clients = new Schema({
     clientId: { type: String, required: false },
     clientName: { type: String, required: false },
+    mapId: { type: String, required: false },
     
   }, {
     timestamps: true
