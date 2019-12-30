@@ -1,22 +1,22 @@
-// fieldlist-model.js - A mongoose model
+// fields-model.js - A mongoose model
 // 
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
-  const fieldlist = new Schema({
-    clientId: { type: Number, required: false },
+  const fields = new Schema({
+    clientId: { type: String, required: false },
     HeaderInfo: { type: String, required: false },
     FieldName: { type: String, required: false },
     MappedFieldName: { type: String, required: false },
-    MaxCharLength: { type: Number, required: false },
+    MaxCharLength: { type: String, required: false },
     SequenceNumber: { type: String, required: false },
     alignment: { type: String, required: false },
     PaddingLeft: { type: String, required: false },
     paddingLeftLength: { type: String, required: false },
     PaddingRight: { type: String, required: false },
-    paddingRightLength: { type: String, required: false },    
+    paddingRightLength: { type: String, required: false }, 
   }, {
     timestamps: true
   });
@@ -24,8 +24,8 @@ module.exports = function (app) {
   // This is necessary to avoid model compilation errors in watch mode
   // see https://github.com/Automattic/mongoose/issues/1251
   try {
-    return mongooseClient.model('fieldlist');
+    return mongooseClient.model('fields');
   } catch (e) {
-    return mongooseClient.model('fieldlist', fieldlist);
+    return mongooseClient.model('fields', fields);
   }
 };
