@@ -7,7 +7,7 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const logics = new Schema({
     logicName: { type: String, required: true },
-    code: { type: String, required: true }
+    logicCode: { type: String, required: false }
   }, {
     timestamps: true
   });

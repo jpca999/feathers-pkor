@@ -8,7 +8,18 @@ module.exports = function (app) {
   const records = new Schema({
     RecordId: { type: Number, required: false },
     RecordName: { type: String, required: false },
-    RecordOrderNo: { type: Number, required: false }
+    RecordOrderNo: { type: Number, required: false },
+
+    HeaderInfo: { type: String, required: false },
+    FieldName: { type: String, required: false },
+    MappedFieldName: { type: String, required: false },
+    MaxCharLength: { type: String, required: false },
+    SequenceNumber: { type: Number, required: false },
+    alignment: { type: String, required: false },
+    PaddingLeft: { type: String, required: false },
+    paddingLeftLength: { type: String, required: false },
+    PaddingRight: { type: String, required: false },
+    paddingRightLength: { type: String, required: false }
   }, {
     timestamps: true
   });
