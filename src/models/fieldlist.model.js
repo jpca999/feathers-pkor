@@ -7,7 +7,7 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const fieldlist = new Schema({
     clientId: { type: Number, required: false },
-    HeaderInfo: { type: String, required: false },
+    RecordName: { type: String, required: false },
     FieldName: { type: String, required: false },
     MappedFieldName: { type: String, required: false },
     MaxCharLength: { type: String, required: false },

@@ -6,20 +6,18 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const records = new Schema({
+    MapId: { type: String, required: false },
     RecordId: { type: Number, required: false },
     RecordName: { type: String, required: false },
-    RecordOrderNo: { type: Number, required: false },
-
-    HeaderInfo: { type: String, required: false },
     FieldName: { type: String, required: false },
     MappedFieldName: { type: String, required: false },
     MaxCharLength: { type: String, required: false },
     SequenceNumber: { type: Number, required: false },
-    alignment: { type: String, required: false },
+    Alignment: { type: String, required: false },
     PaddingLeft: { type: String, required: false },
-    paddingLeftLength: { type: String, required: false },
+    PaddingLeftLength: { type: String, required: false },
     PaddingRight: { type: String, required: false },
-    paddingRightLength: { type: String, required: false }
+    PaddingRightLength: { type: String, required: false }
   }, {
     timestamps: true
   });
