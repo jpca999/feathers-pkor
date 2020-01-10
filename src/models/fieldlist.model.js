@@ -6,10 +6,13 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const fieldlist = new Schema({
+    MapId: { type: String, required: false },
+    RecordId: { type: String, required: false },
     clientId: { type: Number, required: false },
     RecordName: { type: String, required: false },
     FieldName: { type: String, required: false },
-    MappedFieldName: { type: String, required: false },
+    MappingFieldOptions: { type: Array, required: false }, 
+    MappedFieldPicked: { type: String, required: false },
     MaxCharLength: { type: String, required: false },
     SequenceNumber: { type: Number, required: false },
     alignment: { type: String, required: false },
